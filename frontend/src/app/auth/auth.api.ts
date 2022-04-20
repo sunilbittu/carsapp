@@ -41,10 +41,10 @@ export class AuthApi {
     const response = await authAxios.post('/auth/sign-up', {
       email,
       password,
-      invitationToken,
+      /* invitationToken,
       tenantId: tenantSubdomain.isSubdomain
         ? AuthCurrentTenant.get()
-        : undefined,
+        : undefined, */
     });
 
     AuthInvitationToken.clear();
